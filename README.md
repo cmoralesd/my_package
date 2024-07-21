@@ -60,12 +60,13 @@ Tras realizar los cambios, para iniciar nuevamente el nodo se debe ejecutar:
 En caso que el nodo no se inicie correctamente:
 1. Asegúrate que has agregado el espacio de trabajo como fuente de software: `source install/setup.bash`
 2. Elimina las carpetas *build*, *install* y *log* desde el espacio de trabajo. Vuelve a compilar y, nuevamente, ejecuta `source install/setup.bash`     
-------------------------------------------------------------   
-#### NOTA: setuptools deprecation warning
+
+#### NOTA: setuptools deprecation warning   
+
 El uso de la opción *--simlink-install* activa una advertencia que el módulo *setuptools* quedará obsoleto en las próximas versiones. Si desea dejar de visualizar esta notificación, agregar las siguientes instrucciones al archivo *~/.bashrc*:   
     `PYTHONWARNINGS=ignore:::setuptools.command.install,ignore:::setuptools.command.easy_install,ignore:::setuptools.command.develop`   
     `export PYTHONWARNINGS`   
-------------------------------------------------------------   
+####
 
 Seguiremos editando *my_node* para hacer que muestre el mensaje en forma repetitiva. Para ello, le daremos la estructura típica de un nodo de Python. Esta estructura nos servirá como plantilla para los futuros nodos que vamos a crear.   
 ```
