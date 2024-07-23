@@ -56,6 +56,7 @@ Ten presente que, al editar cualquier archivo, los cambios no se verán reflejad
       `cd ~/my_ws/`   
       `colcon build --symlink_install`   
 Tras realizar los cambios, para iniciar nuevamente el nodo se debe ejecutar:   
+      `source  ~/my_ws/install/setup.bash`   
       `ros2 run my_package my_node`   
 En caso que el nodo no se inicie correctamente:
 1. Asegúrate que has agregado el espacio de trabajo como fuente de software: `source install/setup.bash`
@@ -134,3 +135,70 @@ def main(args=None):
 if __name__ == '__main__':
     main()
 ```
+Para poder ejecutar el nodo utilizando `ros2 run`, es necesario ingresar un punto de entrada en la lista *console_scripts* del archivo *setup.py*.:  
+```
+...
+'console_scripts': [
+            ...,
+            'my_publisher = my_package.publisher:main',
+            ...
+        ],
+...
+```
+Compila el paquete con *colcon*.   
+Para ejecutar el nodo:   
+      `source  ~/my_ws/install/setup.bash`   
+      `ros2 run my_package my_publisher`
+
+## 5. Crea un nodo subscriptor  
+Tomando como ejemplo la estructura de *my_node*, agrega las líneas de código necesarias para incluir un suscriptor que muestra un mensaje en el registo de eventos en el log.   
+```
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+
+class MySubscriber(Node):
+    def __init__(self):
+        super().__init__('my_subscriber')
+        self.subscription = self.create_subscription(
+            String,
+            'my_topic',
+            self.listener_callback,
+            10)
+
+    def listener_callback(self, msg):
+        self.get_logger().info('received: "%s"' % msg.data)
+
+
+def main(args=None):
+    try:
+        rclpy.init(args=args)
+        subscriber = MySubscriber()
+        rclpy.spin(subscriber)
+
+    except KeyboardInterrupt:
+        print('... closing node ...')
+    except Exception as e:
+        print(e)
+
+
+if __name__ == '__main__':
+    main()
+```
+Para poder ejecutar el nodo utilizando `ros2 run`, es necesario ingresar un punto de entrada en la lista *console_scripts* del archivo *setup.py*.:  
+```
+...
+'console_scripts': [
+            ...,
+            'my_subscriber = my_package.subscriber:main',
+            ...
+        ],
+...
+```
+Compila el paquete con *colcon*.   
+Para ejecutar el nodo:   
+      `source  ~/my_ws/install/setup.bash`   
+      `ros2 run my_package my_subscriber`
+
+
