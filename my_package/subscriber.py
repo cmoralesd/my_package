@@ -19,8 +19,8 @@ class MySubscriber(Node):
 def main(args=None):
     try:
         rclpy.init(args=args)
-        sub = MySubscriber()
-        rclpy.spin(sub)
+        subscriber = MySubscriber()
+        rclpy.spin(subscriber)
 
     except KeyboardInterrupt:
         print('... closing node ...')

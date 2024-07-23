@@ -12,16 +12,16 @@ class MyPublisher(Node):
 
     def timer_callback(self):
         msg = String()
-        msg.data = "message # %d" %self.i
+        msg.data = 'message # %d' %self.i
         self.publisher.publish(msg)
-        self.get_logger().info("Publishing: '%s" % msg.data)
+        self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
 
 def main(args=None):
     try: 
         rclpy.init(args=args)
-        pub = MyPublisher()
-        rclpy.spin(pub)
+        publisher = MyPublisher()
+        rclpy.spin(publisher)
 
     except KeyboardInterrupt:
         print(' ... exit node')

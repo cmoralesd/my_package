@@ -4,7 +4,7 @@ package_name = 'my_package'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='0.0.1',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -21,8 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'my_node = my_package.my_node:main',
-            'my_publisher = my_package.my_publisher:main',
-            'my_subscriber = my_package.my_subscriber:main',
+            'my_publisher = my_package.publisher:main',
+            'my_subscriber = my_package.subscriber:main',
         ],
     },
 ) 
