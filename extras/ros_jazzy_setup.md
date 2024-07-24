@@ -1,6 +1,6 @@
 # Instalando ROS2 Jazzy en Ubuntu 24.04
 
-Revisa un video con las instrucciones completas de este tutorial aquí: https://youtu.be/HJx_Jre8QlM
+Revisa un video con las instrucciones completas de este tutorial aquí: https://youtu.be/HJx_Jre8QlM   
 Si prefieres utilizar ROS2 Jazzy en un contenedor Docker, revisa aquí: (en desarrollo...) 
 
 ## Preparativos
