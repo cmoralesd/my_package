@@ -45,7 +45,7 @@ Como una buena práctica, en este archivo editaremos la información de:
 - versión
 - descripción
 - mantenedor
-- licencia
+- licencia   
 Además, este archivo contiene la declaración de dependencias de nuestro paquete. Es importante declarar aquí *todas las dependencias requeridas para el funcionamiento de los nodos*.   
 Si queremos recibir o transmitir datos por medio de ROS, al menos deberemos declarar la dependencia a la librería *rclpy*.  
 Agregaremos las dependencias entre las etiquetas `<license>` y `<test_depend>`.   
