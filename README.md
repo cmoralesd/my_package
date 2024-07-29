@@ -1,6 +1,8 @@
 # Primeros pasos con ROS2 - Tu primer paquete con Ament Python
 Con las instrucciones de este tutorial crearemos un primer paquete de ROS2, utilizando Ament Python.    
-Antes de seguir, asegúrate que tienes listo tu setup con Ubuntu 24.04 y Ros2 jazzy. Instrucciones detalladas aquí:  
+Antes de seguir, asegúrate que tienes listo tu setup con Ubuntu 24.04 y Ros2 jazzy. Instrucciones detalladas aquí:
+https://github.com/cmoralesd/my_package/blob/main/extras/ros_jazzy_setup.md   
+   
 El procedimiento de este tutorial está basado en el tutorial oficial (https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) y en las buenas prácticas propuestas por Murilo (https://ros2-tutorial.readthedocs.io/en/latest/index.html)   
 Para una explicación detallada de todo el proceso seguido en este tutorial, revisa este video:  
 ## 1. Crea el espacio de trabajo
