@@ -3,9 +3,9 @@ Con las instrucciones de este tutorial crearemos un primer paquete de ROS2, util
 Antes de seguir, asegúrate que tienes listo tu setup con Ubuntu 24.04 y Ros2 jazzy. Instrucciones detalladas aquí:
 https://github.com/cmoralesd/my_package/blob/main/extras/ros_jazzy_setup.md   
    
-El procedimiento de este tutorial está basado en el tutorial oficial (https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) y en las buenas prácticas propuestas por Murilo (https://ros2-tutorial.readthedocs.io/en/latest/index.html)   
+El procedimiento que se propone está basado en el tutorial oficial (https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) y en las buenas prácticas propuestas por Murilo (https://ros2-tutorial.readthedocs.io/en/latest/index.html)   
    
-Para una explicación detallada de todo el proceso seguido en este tutorial, revisa este video:  https://youtu.be/WiMQ3RJphM0
+Para una explicación detallada de todo el proceso, revisa este video:  https://youtu.be/WiMQ3RJphM0
 ## 1. Crea el espacio de trabajo
 Abre un terminal nuevo, ubícate en la carpeta de usuario `~$` y crea una nueva carpeta para contener el espacio de trabajo (workspace):   
       `mkdir my_ws`   
